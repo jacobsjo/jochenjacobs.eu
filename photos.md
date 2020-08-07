@@ -7,6 +7,6 @@ ref: photos
 order: 2
 ---
 
-This is a [now page](https://nownownow.com/about), and it was inspired by [the /now movement](https://sivers.org/nowff). If you have your own site, [you should make one](https://nownownow.com/about), too.
+There will be more pictures here at some point. For now, take a look at my [500px Account](500px.com/jochenjacobs33)!
 
 [Go to the Home Page]({{ '/' | absolute_url }})
