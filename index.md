@@ -1,11 +1,12 @@
 ---
 layout: page
-title: About
+title: Home
 tagline: A few more words about this theme
-permalink: /
-ref: /
-layout: home
+permalink: /about.html
+ref: home
+order: 0
 ---
+
 
 Cayman Blog Theme is a clean, responsive blogging theme for Jekyll. It is inspired by the Cayman Theme for Github Pages, which can be greatly used for single projects but not as blogging platform.
 
@@ -14,3 +15,5 @@ This theme has instead all you need to start today blogging with Jekyll, and no 
 Have a look at the Github page for more information.
 
 You find this descriptive text in the `index.md` file, so you can change it, or remove it completely, according to your needs.
+
+[Go to the Home Page]({{ '/' | absolute_url }})
