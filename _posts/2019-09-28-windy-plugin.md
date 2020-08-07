@@ -32,13 +32,13 @@ Original release
 Fixed timezone issues:
 - Displays times in timezone of position selected (instead of local timezone of user)
 - When Windy setting to display all times in UTC is selected, displays all times in UTC
-
+<!-- end of the list -->
 #### V0.2.0
 - **The hook has been changed from the Overlay layers menu to the context-menu.**
 - Displays only times that exist: If the sun does not go far enough below the horizon, astronomical dawn and dusk might not exist and the entire night is astronomical twilight. In this (and more extreme) cases the non-existent times are hidden
 - The plugin now works on mobile (thanks @rittels for the help)
 - Fixed some delay issues that resulted from the timezone-lookup
-
+<!-- end of the list -->
 #### V0.3.0
 - reworked detail phase
 - included details about the moon
@@ -46,3 +46,4 @@ Fixed timezone issues:
 - redesigned current sun position display
 - added options to disable moon, astronomical details and photography details separately
 - added footnote with links to plugin pages
+<!-- end of the list -->
