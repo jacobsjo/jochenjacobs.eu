@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 title: Jochen Jacobs
 description: Welcome!
+github:
+  is_project_page: false
