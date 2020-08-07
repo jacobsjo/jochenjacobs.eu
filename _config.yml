@@ -3,3 +3,6 @@ title: Jochen Jacobs
 description: Welcome!
 github:
   is_project_page: false
+header_pages:
+  - /
+  - Photos.md
