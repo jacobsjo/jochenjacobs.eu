@@ -65,7 +65,9 @@
         {% endif %}
 
         <section class="page-header">
-            <img src="../assets/pictures/profile_picture.png" style="float:left" width="190" height="84" />
+            {% if page.layout == 'home' %}
+            <img src="../assets/pictures/profile_picture.png" style="float:left" width="190" height="190" />
+            {% endif %}
             <h1 class="project-name">{{ page-title }}</h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
             {% if page.layout == 'home' and site.github.is_project_page %}
