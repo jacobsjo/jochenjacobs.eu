@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Photos
-tagline: What I'm doing now
+tagline: My Portfolio
 permalink: /photos.html
 ref: photos
 order: 2
