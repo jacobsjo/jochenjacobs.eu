@@ -127,6 +127,22 @@ a {
   }
 }
 
+.profile_picture {
+    @include large {
+      width: 190;
+      height: 190;
+    }
+
+    @include medium {
+      width: 120;
+      height: 120;
+    }
+
+    @include small {
+      display: none;
+    }
+}
+
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
