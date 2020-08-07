@@ -65,7 +65,7 @@
         {% endif %}
 
         <section class="page-header">
-            {% if page.layout == 'home' %}
+            {% if page.layout == 'home' or page.ref == 'contact' %}
             <img class="profile_picture" src="../assets/pictures/profile_picture.png" style="float:left" />
             {% endif %}
             <h1 class="project-name">{{ page-title }}</h1>
