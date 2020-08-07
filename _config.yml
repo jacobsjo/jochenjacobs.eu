@@ -23,6 +23,10 @@ author: Jochen Jacobs
 image: /thumbnail-jumbo.png
 twitter:
   username: jacobsjo_
+instagram:
+  username: jochen.jacobs
+500px:
+  username: jochenjacobs33
 
 plugins:
   - jekyll-feed

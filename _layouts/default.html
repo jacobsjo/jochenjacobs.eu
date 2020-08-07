@@ -2,7 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
 <head>
-    
+
     {% if site.google_analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
@@ -12,48 +12,48 @@
         gtag('config', '{{ site.google_analytics }}');
     </script>
     {% endif %}
-    
+
     <!-- Non social metatags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
+
     {% if page.title %}
     {% assign page-title = page.title | escape %}
     {% else %}
     {% assign page-title = site.title | escape %}
     {% endif %}
-    
+
     <title>{{ page-title }}</title>
-    
+
     {% if site.plugins contains "jekyll-seo-tag" %}
     <!-- jekyll-seo-tag -->
     {% else %}
     {% include social-metatags.html %}
     {% endif %}
-    
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-    
+
     {% if site.plugins contains "jekyll-feed" %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | absolute_url }}">
     {% endif %}
-    
+
     <link rel="shortcut icon" href="{{ "/favicon.ico" | absolute_url }}">
-    
+
     <meta name="robots" content="noarchive">
-    
+
     <!-- <link rel="alternate" media="only screen and (max-width: 640px)" href="">
         <link rel="alternate" media="handheld" href=""> -->
-        
-        
+
+
         <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | absolute_url }}">
     </head>
     <body>
-        
+
         {% include site-header.html %}
-        
+
         {% if page.layout == 'home' %}
         {% assign page-tagline = site.description | default: site.github.project_tagline | escape %}
         {% endif %}
@@ -63,7 +63,7 @@
         {% if page.layout == 'post' %}
         {% assign page-tagline = page.tagline | escape  %}
         {% endif %}
-        
+
         <section class="page-header">
             <h1 class="project-name">{{ page-title }}</h1>
             <h2 class="project-tagline">{{ page-tagline }}</h2>
@@ -89,28 +89,44 @@
             {% endif %}
             <!-- End: Post tagline -->
         </section>
-        
+
         <section class="main-content">
-            
+
             {{ content }}
-            
+
             <footer class="site-footer">
                 <!-- SVG icons from https://iconmonstr.com -->
-                
+
                 <!-- Github icon -->
                 <span class="my-span-icon">
                     <a href="{{ site.github.owner_url }}" aria-label="{{ site.github.owner_name }}'s GitHub" title="{{ site.github.owner_name }}'s GitHub">
                         <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
                 </span>
-                
+
                 <!-- Twitter icon -->
                 <span class="my-span-icon">
                     <a href="https://twitter.com/{{ site.twitter.username }}" aria-label="{{ site.github.owner_name }}'s Twitter" title="{{ site.github.owner_name }}'s Twitter">
                         <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg>
                     </a>
                 </span>
-                
+
+                <!-- Instagram icon -->
+                <span class="my-span-icon">
+                    <a href="https://instagram.com/{{ site.instagram.username }}" aria-label="{{ site.github.owner_name }}'s Instagram" title="{{ site.github.owner_name }}'s Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </span>
+
+
+                <!-- 500px icon -->
+                <span class="my-span-icon">
+                    <a href="https://500px.com/{{ site.500px.username }}" aria-label="{{ site.github.owner_name }}'s 500px" title="{{ site.github.owner_name }}'s 500px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.537 8.63c-.089.1-.193.207-.302.207l-.128-.053c-.558-.483-1.07-.815-1.614-1.045-.684-.289-1.41-.436-2.16-.436-.661 0-1.388.138-2.044.389-.204.078-.31-.192-.351-.293-.047-.128-.068-.223-.059-.296.009-.077.05-.132.119-.159.642-.278 1.515-.444 2.335-.444.858 0 1.69.168 2.473.5.721.305 1.305.682 1.837 1.186.145.138.044.277-.106.444zm-5.264 3.653c-.082-.087-.048-.196.109-.354.093-.091.173-.138.241-.138l.099.04.514.514.509-.508c.088-.082.226-.045.369.098.099.099.198.228.085.349l-.51.515.489.489c.051.056.155.171-.054.384-.088.09-.173.136-.25.136-.057-.001-.104-.026-.149-.077l-.483-.482-.514.517-.116.042c-.075 0-.159-.043-.246-.129l-.016-.016c-.051-.048-.135-.13-.137-.223l.063-.134.511-.512-.514-.511zm.05 2.609c.03-.1.123-.404.342-.338.016.004.395.096.604.096 1.083 0 1.931-.845 1.931-1.923 0-.506-.197-.98-.557-1.336-.362-.359-.848-.557-1.369-.557-.537 0-1.03.222-1.388.626-.312.353-.499.821-.499 1.251l-.004 3.228c.561.341 1.214.521 1.89.521.999 0 1.971-.399 2.666-1.095.705-.704 1.093-1.643 1.093-2.643 0-.996-.39-1.934-1.099-2.642-.706-.706-1.646-1.095-2.649-1.095-1.008 0-1.951.389-2.657 1.095-.005.004-.457.459-.602.675l-.014.017c-.094.131-.183.255-.57.172-.198-.042-.412-.167-.412-.337v-5.308c-.001-.144.116-.299.302-.299h6.85c.231.002.231.324.231.43s0 .428-.23.43h-6.335l.002 3.769c.44-.455 1.195-.94 1.641-1.129.557-.235 1.183-.36 1.809-.36.618 0 1.219.121 1.783.36.547.231 1.037.562 1.457.982.422.421.751.911.982 1.457.239.565.36 1.166.36 1.784 0 .619-.121 1.219-.36 1.784-.231.546-.561 1.036-.982 1.457-.421.42-.91.751-1.457.982-.564.239-1.165.36-1.783.36s-1.219-.121-1.783-.36c-.547-.23-1.036-.562-1.458-.982-.42-.42-.75-.911-.98-1.456l-.12-.311c-.066-.219.236-.312.335-.342.229-.07.396-.105.469.09.188.498.475.987.762 1.306.001-.635.003-2.57.006-2.651v-.016c0-.656.288-1.315.791-1.809.528-.52 1.23-.806 1.979-.806 1.528 0 2.771 1.234 2.771 2.751 0 1.529-1.244 2.773-2.771 2.773-.301 0-.528-.021-.877-.128-.041-.012-.218-.089-.1-.473zm5.568 2.192l-.049.052c-.585.584-1.267 1.043-2.023 1.364-.785.332-1.619.5-2.477.5-.859 0-1.693-.168-2.479-.5-.757-.32-1.437-.779-2.021-1.363-.584-.584-1.043-1.265-1.363-2.022-.2-.472-.342-.972-.423-1.477-.028-.218.274-.265.375-.28.239-.037.405-.024.44.157l.005.034c.027.154.109.622.361 1.245.258.638.657 1.23 1.188 1.761.508.509 1.101.908 1.76 1.187.684.289 1.408.435 2.157.435.747 0 1.473-.146 2.155-.435.659-.279 1.252-.678 1.762-1.187l.048-.049c.051-.052.118-.068.193-.046.073.021.157.079.256.178.257.253.2.376.135.446z"/></svg>
+                    </a>
+                </span>
+
+
                 <!-- RSS icon -->
                 {% if site.plugins contains "jekyll-feed" %}
                 <span class="my-span-icon">
@@ -119,7 +135,7 @@
                     </a>
                 </span>
                 {% endif %}
-                
+
                 <!-- Contact icon -->
                 {% assign contact_page = site.pages | where: "path", "contact.md" | first %}
                 {% if contact_page.title %}
@@ -129,14 +145,14 @@
                     </a>
                 </span>
                 {% endif %}
-                
+
             </footer>
         </section>
-        
+
         <script>
             var menu = document.querySelector("nav.site-nav");
             var checkbox = document.getElementById("nav-trigger");
-            
+
             // close menu if click outside menu
             document.addEventListener("click", function(e) {
                 if (menu != e.target &&
@@ -144,7 +160,7 @@
                     checkbox.checked = false;
                 }
             }, false);
-            
+
             function isDescendant(parent, child) {
                 var node = child.parentNode;
                 while (node != null) {
@@ -154,9 +170,8 @@
                     node = node.parentNode;
                 }
                 return false;
-            }  
+            }
         </script>
-        
+
     </body>
     </html>
-    
