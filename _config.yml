@@ -15,14 +15,15 @@ cayman-blog:
 
 theme: # leave it empty
 
+github:
+  is_project_page: false
+
 # social
 author: Jochen Jacobs
 image: /thumbnail-jumbo.png
 twitter:
   username: jacobsjo_
 
-plugins:
-  - jekyll-target-blank
 
 target-blank:
     rel: nofollow
