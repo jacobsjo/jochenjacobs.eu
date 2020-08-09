@@ -13,16 +13,17 @@ This is a plugin plugin that gives shows sun and moon position on the map and gi
 To open the display, right-click on the map (or tap and hold on mobile), then select "Sun Position". Then open a weather picker to see the sun dial and the details on the left.
 
 ### Dial
-The dial displays the current sun and moon azimuth on the map using a black line from the picker position. Additionally, dashed lines show the azimuth of sunrise and sunset and dotted lines show the azimuth of moonrise and moonset. Clicking on the sunrise, sunset, moonrise and moonset lines will set the current time to the respective time.
-
 ![Sun dial](https://raw.githubusercontent.com/jacobsjo/windy-plugin-sun-position/master/pictures/sundial.jpg "Sun dial")
 
+The dial displays the current sun and moon azimuth on the map using a black line from the picker position. Additionally, dashed lines show the azimuth of sunrise and sunset and dotted lines show the azimuth of moonrise and moonset. Clicking on the sunrise, sunset, moonrise and moonset lines will set the current time to the respective time.
+
 ### Detail pane
+![Sun detail pane](https://raw.githubusercontent.com/jacobsjo/windy-plugin-sun-position/master/pictures/sundetail.jpg "Sun detail pane")
+
 The detail pane on the left shows the time of astronomical, nautical, and civil dusk and dawn; start and end of blue and golden hour and solar noon. Moonrise and moonset times are also added to the timeline. Below, a diagram of the sun and moon altitudes over time is displayed. Below that, details about the current sun and moon position are shown.
 
 On the top of the detail pane it is possible to enable and disable individual displays. The telescope toggles visibility of astronomical sun details (astronomical and nautical dawn and dusk). The camera toggles visibility of blue and golden hour times. The moon toggles visibility of moon details.
 
-![Sun detail pane](https://raw.githubusercontent.com/jacobsjo/windy-plugin-sun-position/master/pictures/sundetail.jpg "Sun detail pane")
 
 ### Changelog
 #### V0.1.0
