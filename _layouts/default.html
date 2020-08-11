@@ -48,7 +48,7 @@
         <link rel="alternate" media="handheld" href=""> -->
 
 
-        <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | absolute_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | asset_url }}">
     </head>
     <body>
 
@@ -70,8 +70,14 @@
         {% assign header_bg = 'assets/pictures/header.jpg' | escape  %}
         {% endif %}
 
+        {% if page.header_color %}
+        {% assign header_color = page.header_color %}
+        {% else %}
+        {% assign header_color = 'white' %}
+        {% endif %}
 
-        <section class="page-header" style="background-image: url({{ header_bg }})">
+
+        <section class="page-header" style="background-image: url({{ header_bg }}); color: {{header_color}}">
             {% if page.layout == 'home' or page.ref == 'contact' %}
             <img class="profile_picture" src="../assets/pictures/profile_picture.png" style="float:left" />
             {% endif %}

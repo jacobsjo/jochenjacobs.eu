@@ -3,6 +3,7 @@ layout: post
 title: "Windy Plugin: Sun Position"
 tagline: "Inspired py PhotoPills, this Plugin gives you Sun details on Windy.com"
 header_bg: "/assets/blog_assets/windy-plugin-sun-position/header.jpg"
+header_color: '#010'
 categories: project
 author: "Jochen Jacobs"
 ---

@@ -107,7 +107,12 @@ a {
 }
 
 .page-header {
-  color: $header-heading-color;
+//  {% if page.header_text_color %}
+//    color: {{page.header_text_color}};
+//  {% else %}
+//    color: $header-heading-color;
+//  {% endif %}
+
   text-align: center;
   //background-color: $header-bg-color;
   //background-image: $header-bg; // linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
