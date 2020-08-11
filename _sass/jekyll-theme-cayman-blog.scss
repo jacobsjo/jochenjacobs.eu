@@ -33,6 +33,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: $body-text-color;
+  min-width: 24rem;
 }
 
 #skip-to-content {
@@ -116,19 +117,24 @@ a {
   text-align: center;
   //background-color: $header-bg-color;
   //background-image: $header-bg; // linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
-  background-size: cover;
   background-position: center;
 
   @include large {
     padding: 5rem 6rem;
+    height: 20rem;
+    background-size: 1920px;
   }
 
   @include medium {
     padding: 3rem 4rem;
+    height: 15rem;
+    background-size: 75rem;
   }
 
   @include small {
     padding: 2rem 1rem;
+    height: 10rem;
+    background-size: 48rem;
   }
 }
 
@@ -161,7 +167,7 @@ a {
   }
 
   @include small {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -198,6 +204,7 @@ a {
   }
 
   @include small {
+    display: none;
     font-size: 0.75rem;
   }
 }
