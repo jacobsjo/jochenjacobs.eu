@@ -64,7 +64,14 @@
         {% assign page-tagline = page.tagline | escape  %}
         {% endif %}
 
-        <section class="page-header">
+        {% if page.header_bg %}
+        {% assign header_bg = page.header_bg | escape  %}
+        {% else %}
+        {% assign header_bg = 'assets/pictures/header.jpg' | escape  %}
+        {% endif %}
+
+
+        <section class="page-header" style="background-image: url({{ header_bg }})">
             {% if page.layout == 'home' or page.ref == 'contact' %}
             <img class="profile_picture" src="../assets/pictures/profile_picture.png" style="float:left" />
             {% endif %}
