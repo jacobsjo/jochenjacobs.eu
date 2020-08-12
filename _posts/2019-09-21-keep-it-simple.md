@@ -12,7 +12,7 @@ For my bachelor thesis in computer-science at TU-Berlin I have investigated the 
 There is also a paper that developed from this research, presented at ACM SAP 2019 and published in ACM TAP 2019. You can find both the paper and the bachelor thesis below.
 
 ## Keep It Simple: Depth-based Dynamic Adjustment of Rendering for Head-mounted Displays Decreases Visual Comfort
-Jochen Jacobs, Xi Wand and Mark Alexa - TU-Berlin - Published in TAP 2019, September 2019, Issue 3 (Special Issue on SAP 2019)
+Jochen Jacobs, Xi Wang and Mark Alexa - TU-Berlin - Published in TAP 2019, September 2019, Issue 3 (Special Issue on SAP 2019)
 
 DOI: [10.1145/3353902](https://doi.org/10.1145/3353902)
 
