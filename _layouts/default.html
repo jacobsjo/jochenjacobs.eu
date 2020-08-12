@@ -76,6 +76,11 @@
         {% assign header_color = 'white' %}
         {% endif %}
 
+        {% if page.header_color %}
+        {% assign header_source = page.header_source %}
+        {% else %}
+        {% assign header_source = '<span style="white-space: nowrap">A red band at the horizon -</span> <span style="white-space: nowrap">Wassenaar, Nethernands -</span> <span style="white-space: nowrap">Mar 23, 2018' %}
+        {% endif %}
 
         <section class="page-header" style="background-image: url({{ header_bg }}); color: {{header_color}}">
             {% if page.layout == 'home' or page.ref == 'contact' %}
@@ -103,8 +108,10 @@
                 {% endif %}
             </h2>
             {% endif %}
+
             <!-- End: Post tagline -->
         </section>
+        <div class="page-header-source">{{header_source}}</div>
 
         <section class="main-content">
 

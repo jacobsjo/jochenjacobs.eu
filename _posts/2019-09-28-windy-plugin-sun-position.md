@@ -4,11 +4,11 @@ title: "Windy Plugin: Sun Position"
 tagline: "Inspired py PhotoPills, this Plugin gives you Sun details on Windy.com"
 header_bg: "/assets/blog_assets/windy-plugin-sun-position/header.jpg"
 header_color: '#010'
+header_source: '© OpenStreetMap contributors ; windy.com'
 categories: project
 author: "Jochen Jacobs"
 ---
-
-This is a plugin plugin that gives shows sun and moon position on the map and gives details about sunset and sunrise times as well as other sun and moon details. It is called ```windy-plugin-sun-position```. To use the plugin on mobile, go directly to [www.windy.com/plugins](https://www.windy.com/plugins) to open the plugin page (does not work in the app)
+This is a plugin for [Windy](https://www.windy.com) that gives shows sun and moon position on the map and gives details about sunset and sunrise times as well as other sun and moon details. It is called ```windy-plugin-sun-position```. To use the plugin on mobile, go directly to [www.windy.com/plugins](https://www.windy.com/plugins) to open the plugin page (does not work in the app)
 
 **Version 0.3.0 adds moon details and options to disable astronomical details or blue/golden hour times**
 

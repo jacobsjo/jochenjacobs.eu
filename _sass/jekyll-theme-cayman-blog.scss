@@ -118,6 +118,8 @@ a {
   //background-color: $header-bg-color;
   //background-image: $header-bg; // linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: darken(gray, 40);
 
   @include large {
     padding: 5rem 6rem;
@@ -207,6 +209,15 @@ a {
     display: none;
     font-size: 0.75rem;
   }
+}
+
+.page-header-source{
+  font-size: 0.8rem;
+  font-weight: normal;
+  opacity: 0.7;
+  font-style: italic;
+  float: right;
+  margin-right: 0.5rem;
 }
 
 .main-content {
