@@ -8,9 +8,14 @@ header_source: '© OpenStreetMap contributors ; windy.com'
 categories: project
 author: "Jochen Jacobs"
 ---
-This is a plugin for [Windy](https://www.windy.com) that gives shows sun and moon position on the map and gives details about sunset and sunrise times as well as other sun and moon details. It is called ```windy-plugin-sun-position```. To use the plugin on mobile, go directly to [www.windy.com/plugins](https://www.windy.com/plugins) to open the plugin page (does not work in the app)
 
-**Version 0.3.0 adds moon details and options to disable astronomical details or blue/golden hour times**
+This is a plugin for [Windy](https://www.windy.com) that gives shows sun and moon position on the map and gives details about sunset and sunrise times as well as other sun and moon details. It is called ```windy-plugin-sun-position```.
+
+**Unfortunately Plugins do not work in the app currently**
+
+[Open Plugin](http://www.windy.com/plugins/windy-plugin-sun-position) | [View Code on GitHub](https://github.com/jacobsjo/windy-plugin-sun-position)
+
+You can also open the plugin by goging to *Menu → Install Windy plugin → Select "Sun position"*.
 
 To open the display, right-click on the map (or tap and hold on mobile), then select "Sun Position". Then open a weather picker to see the sun dial and the details on the left.
 
