@@ -2,10 +2,10 @@
 layout: photo
 title: "Test Photo 6"
 categories: photo
-photo: /photos/images/portfolio-6.jpg
-thumbnail: /photos/images/thumbnails/portfolio-6.jpg
+photo: /portfolio/images/portfolio-6.jpg
+thumbnail: /portfolio/images/thumbnails/portfolio-6.jpg
 author: "Jochen Jacobs"
-order: 6
+order: 1.5
 ---
 
 This is a test photo

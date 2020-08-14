@@ -435,6 +435,8 @@ a {
 
 .galery {
   font-size: 0;
+  padding: 0;
+
   .galery-image{
     display:inline-block;
 
@@ -453,20 +455,17 @@ a {
   }
 
   @include large {
-    max-width: 64rem;
-    padding: 0rem 6rem;
+    max-width: 82rem;
     margin: 0 auto;
-    zoom: 1.3;
   }
 
   @include medium {
-    padding: 0rem 4rem;
   }
 
   @include small {
-    width: 100%;
-    padding: 0rem 1rem;
-    zoom: 0.8;
+    width: auto;
+    margin: 0 1rem;
+    -gallery-scale: 0.8;
   }
 }
 

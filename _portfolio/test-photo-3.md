@@ -2,8 +2,8 @@
 layout: photo
 title: "Test Photo 3"
 categories: photo
-photo: /photos/images/portfolio-3.jpg
-thumbnail: /photos/images/thumbnails/portfolio-3.jpg
+photo: /portfolio/images/portfolio-3.jpg
+thumbnail: /portfolio/images/thumbnails/portfolio-3.jpg
 author: "Jochen Jacobs"
 order: 3
 ---

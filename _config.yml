@@ -2,6 +2,10 @@ title: Jochen Jacobs
 description: Welcome to my personal homepage!
 show_downloads: true
 
+collections:
+  portfolio:
+    output: true
+
 baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
 url: "https://jacobsjo.eu" # change this to the base hostname & protocol for your site
 
@@ -27,6 +31,7 @@ instagram:
   username: jochen.jacobs
 500px:
   username: jochenjacobs33
+
 
 plugins:
   - jekyll-feed

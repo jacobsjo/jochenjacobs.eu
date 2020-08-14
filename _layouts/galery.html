@@ -9,18 +9,18 @@ layout: default
 </section>
 
 <section class="galery" id="galery">
-{% assign posts = site.posts | sort: "order"%}
-{% for post in posts %}
+{% assign photos = site.portfolio | sort: "order"%}
+{% for post in photos %}
   {% if post.categories contains 'photo' %}
     {% assign source = post.thumbnail %}
-    <a class="galery-image" id="{{ post.title | replace: ' ', '-' | downcase }}" href="{{ post.url | absolute_url }}" galery-max-width="{% imagesize source:width?height=300 %}"><img src="{{ source }}" alt="{{ post.title }}"></a>
+    <a class="galery-image" id="{{ post.title | replace: ' ', '-' | downcase }}" href="{{ post.url | absolute_url }}" galery-max-width="{% imagesize source:width?height=400 %}"><img src="{{ source }}" alt="{{ post.title }}"></a>
   {% endif %}
 {% endfor %}
 </section>
 
 <script type="text/javascript">
   function resizeImages(){
-    var document_width = document.getElementById('galery').clientWidth - 10;
+    var document_width = document.getElementById('galery').clientWidth - 1;
     var img_width_sum = 0;
     var current_imgs = [];
     console.log("document_width: " + document_width)
@@ -33,9 +33,9 @@ layout: default
       if (img_width_sum > document_width){
         var scale = document_width * 1.0 / img_width_sum;
         current_imgs.forEach((item, i) => {
-          var width = (item.getAttribute('galery-max-width') * 1.0 / img_width_sum) * 100 + '%'
+          var width = (item.getAttribute('galery-max-width') * scale) + 'px'
           item.style.width = width;
-          item.style.height = (300 * scale) + 'px';
+          item.style.height = (400 * scale) + 'px';
         });
         img_width_sum = 0
         current_imgs = []
@@ -48,7 +48,7 @@ layout: default
       current_imgs.forEach((item, i) => {
         var width = item.getAttribute('galery-max-width') + 'px'
         item.style.width = width;
-        item.style.height = 300 + 'px';
+        item.style.height = 400 + 'px';
       });
     } else {
       current_imgs.forEach((item, i) => {

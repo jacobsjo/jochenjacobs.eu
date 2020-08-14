@@ -9,7 +9,7 @@ layout: default
     {{ content }}
   </div>
 
-  <a href="/photos/#{{ page.title | replace: ' ', '-' | downcase }}">back to galery</a>
+  <a href="/portfolio#{{ page.title | replace: ' ', '-' | downcase }}">back to galery</a>
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
