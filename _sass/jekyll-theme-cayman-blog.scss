@@ -433,6 +433,21 @@ a {
   }
 }
 
+.galery {
+  img{
+    float: left;
+    object-fit: cover;
+    object-position: right;
+    padding: 5px;
+    margin: 0;
+    border: 0;
+  }
+
+  @include large {
+    width: 100%;
+  }
+}
+
 .site-footer {
   padding-top: 2rem;
   margin-top: 2rem;
