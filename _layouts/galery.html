@@ -5,52 +5,60 @@ layout: default
   <div>
     {{ content }}
   </div>
+</article>
+</section>
 
+<section class="galery" id="galery">
+{% assign posts = site.posts | sort: "order"%}
+{% for post in posts %}
+  {% if post.categories contains 'photo' %}
+    {% assign source = post.thumbnail %}
+    <a class="galery-image" id="{{ post.title | replace: ' ', '-' | downcase }}" href="{{ post.url | absolute_url }}" galery-max-width="{% imagesize source:width?height=300 %}"><img src="{{ source }}" alt="{{ post.title }}"></a>
+  {% endif %}
+{% endfor %}
+</section>
 
-  {% assign num = page.photos.size %}
-  <section class="galery" id="galery">
-  {% for i in (1..num) %}
-    {% assign source = site.baseurl | append: '/images/photos/thumbnails/' | append: page.photos.set | append: '-' | append: i | append: '.jpg' %}
-    <img src="{{ source }}" alt="Photo {{ i }} from {{ page.photos.set | capitalize }}" galery-max-width="{% imagesize source:width?height=300 %}">
-  {% endfor %}
-  </section>
+<script type="text/javascript">
+  function resizeImages(){
+    var document_width = document.getElementById('galery').clientWidth - 10;
+    var img_width_sum = 0;
+    var current_imgs = [];
+    console.log("document_width: " + document_width)
+    document.querySelectorAll('.galery .galery-image').forEach(img => {
+      var img_width = parseInt(img.getAttribute('galery-max-width'));
+      console.log("img_width: " + img_width)
+      img_width_sum += img_width
+      console.log("img_width_sum: " + img_width_sum)
+      current_imgs.push(img)
+      if (img_width_sum > document_width){
+        var scale = document_width * 1.0 / img_width_sum;
+        current_imgs.forEach((item, i) => {
+          var width = (item.getAttribute('galery-max-width') * 1.0 / img_width_sum) * 100 + '%'
+          item.style.width = width;
+          item.style.height = (300 * scale) + 'px';
+        });
+        img_width_sum = 0
+        current_imgs = []
+      }
+    })
 
-  <script type="text/javascript">
-    function resizeImages(){
-      var document_width = document.getElementById('galery').clientWidth;
-      var img_width_sum = 0;
-      var current_imgs = [];
-      console.log("document_width: " + document_width)
-      document.querySelectorAll('img').forEach(img => {
-        var img_width = parseInt(img.getAttribute('galery-max-width'));
-        console.log("img_width: " + img_width)
-        img_width_sum += img_width
-        console.log("img_width_sum: " + img_width_sum)
-        current_imgs.push(img)
-        if (img_width_sum > document_width){
-          var scale = document_width * 1.0 / img_width_sum;
-          current_imgs.forEach((item, i) => {
-            var width = item.getAttribute('galery-max-width') * scale + 'px'
-            item.style.width = width;
-            item.style.height = (300 * scale) + 'px';
-          });
-          img_width_sum = 0
-          current_imgs = []
-        }
-      })
-
-      var scale = document_width * 1.0 / img_width_sum;
-      if (scale > 1.2 ) scale = 1.2
+    var scale = document_width * 1.0 / img_width_sum;
+    if (scale > 1.2 ){
+      scale = 1.2
       current_imgs.forEach((item, i) => {
-        var width = item.getAttribute('galery-max-width') * scale + 'px'
+        var width = item.getAttribute('galery-max-width') + 'px'
+        item.style.width = width;
+        item.style.height = 300 + 'px';
+      });
+    } else {
+      current_imgs.forEach((item, i) => {
+        var width = (item.getAttribute('galery-max-width') * 1.0 / img_width_sum) * 100 + '%'
         item.style.width = width;
         item.style.height = (300 * scale) + 'px';
       });
     }
+  }
 
-    window.onresize = resizeImages;
-    resizeImages();
-  </script>
-
-  <br clear=both>
-</article>
+  window.onresize = resizeImages;
+  resizeImages();
+</script>

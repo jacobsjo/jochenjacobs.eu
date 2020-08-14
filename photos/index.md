@@ -2,7 +2,7 @@
 layout: galery
 title: Photos
 tagline: My Portfolio
-permalink: /photos.html
+permalink: /photos
 photos:
   set: portfolio
   size: 13

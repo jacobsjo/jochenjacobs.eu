@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <a href="/photos/#{{ page.title | replace: ' ', '-' | downcase }}"><img class="large-image" src="{{ page.photo }}"></a>
+  <h2> {{page.title}} </h2>
+
+  <div itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <a href="/photos/#{{ page.title | replace: ' ', '-' | downcase }}">back to galery</a>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
