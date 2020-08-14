@@ -469,8 +469,9 @@ a {
 }
 
 .large-image{
-  max-width: 100%;
-  max-height: 700px;
+  max-height: calc(max(calc(100vh - 14rem), 25rem));
+  width: 100%;
+  object-fit: contain;
 }
 
 .site-footer {
