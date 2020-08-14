@@ -4,6 +4,7 @@ title: "Test Photo 12"
 categories: photo
 photo: /portfolio/images/portfolio-12.jpg
 thumbnail: /portfolio/images/thumbnails/portfolio-12.jpg
+gallery-max-width: 566
 author: "Jochen Jacobs"
 order: 12
 ---

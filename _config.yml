@@ -35,7 +35,6 @@ instagram:
 
 plugins:
   - jekyll-feed
-  - jekyll-image-size
 
 target-blank:
     rel: nofollow

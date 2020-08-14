@@ -13,7 +13,7 @@ layout: default
 {% for post in photos %}
   {% if post.categories contains 'photo' %}
     {% assign source = post.thumbnail %}
-    <a class="galery-image" id="{{ post.title | replace: ' ', '-' | downcase }}" href="{{ post.url | absolute_url }}" galery-max-width="{% imagesize source:width?height=400 %}"><img src="{{ source }}" alt="{{ post.title }}"></a>
+    <a class="galery-image" id="{{ post.title | replace: ' ', '-' | downcase }}" href="{{ post.url | absolute_url }}" galery-max-width="{{ post.gallery-max-width }}"><img src="{{ source }}" alt="{{ post.title }}"></a>
   {% endif %}
 {% endfor %}
 </section>
