@@ -2,7 +2,21 @@
 layout: default
 ---
 <article itemscope itemtype="http://schema.org/BlogPosting">
-  <img class="large-image" src="{{ page.photo }}">
+  <a href="/portfolio#{{ page.title | replace: ' ', '-' | downcase }}">back to galery</a>
+  <img class="large-image" src="{{ page.photo }}"><br/>
+  <time datetime="{{ page.taken | date_to_xmlschema }}" itemprop="datePublished">
+      {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
+      {{ page.taken | date: date_format }}
+  </time> -
+  <div class="embedded-osm">
+  <a>{{page.place}}</a><br>
+  {% if page.lat and page.lon %}
+    <div class='map'>
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox={{page.lon | minus: page.bbox_size}}%2C{{page.lat | minus: page.bbox_size}}%2C{{page.lon | plus: page.bbox_size}}%2C{{page.lat | plus: page.bbox_size}}&layer=mapnik&marker={{page.lat}}%2C{{page.lon}}"></iframe>
+    </div>
+  {% endif %}
+  </div>
+
   <h2> {{page.title}} </h2>
 
   <div itemprop="articleBody">

@@ -465,7 +465,6 @@ a {
   @include small {
     width: auto;
     margin: 0 1rem;
-    -gallery-scale: 0.8;
   }
 }
 
@@ -475,9 +474,36 @@ a {
   object-fit: contain;
 }
 
+.embedded-osm{
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  max-width: 90%;
+  width: 350px;
+  .map{
+    display: block;
+    width: 100%;
+    height: 380px;
+    left: -5000px;
+    position: absolute;
+
+    iframe{
+      width: 100%;
+      height: 350px;
+
+      border: 1px solid black
+    }
+  }
+}
+
+.embedded-osm:hover .map{
+  left: 0px;
+}
+
 .site-footer {
-  padding-top: 2rem;
-  margin-top: 2rem;
+  padding-top: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
   border-top: solid 1px $hr-border-color;
 
   @include large {
