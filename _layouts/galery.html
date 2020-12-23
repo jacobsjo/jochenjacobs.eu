@@ -13,7 +13,9 @@ layout: default
 {% for post in photos %}
   {% if post.categories contains 'photo' %}
     {% assign source = post.thumbnail %}
-    <a class="galery-image" id="{{ post.title | replace: ' ', '-' | downcase }}" href="{{ post.url | absolute_url }}" galery-max-width="{{ post.gallery-max-width }}"><img src="{{ source }}" alt="{{ post.title }}"></a>
+    <a class="galery-image" id="{{ post.title | replace: ' ', '-' | downcase }}" href="{{ post.url | absolute_url }}" galery-max-width="{{ post.gallery-max-width }}">
+      <img src="{{ source }}" alt="{{ post.title }}" title="{{ post.title }}"">
+    </a>
   {% endif %}
 {% endfor %}
 </section>
@@ -54,7 +56,7 @@ layout: default
       current_imgs.forEach((item, i) => {
         var width = (item.getAttribute('galery-max-width') * 1.0 / img_width_sum) * 100 + '%'
         item.style.width = width;
-        item.style.height = (300 * scale) + 'px';
+        item.style.height = (400 * scale) + 'px';
       });
     }
   }

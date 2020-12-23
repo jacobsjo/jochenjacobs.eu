@@ -1,31 +1,34 @@
 ---
 layout: default
 ---
-<article itemscope itemtype="http://schema.org/BlogPosting">
-  <a href="/portfolio#{{ page.title | replace: ' ', '-' | downcase }}">back to galery</a>
-  <img class="large-image" src="{{ page.photo }}"><br/>
+</section>
+    <img class="large-image" id="large-image" src="{{ page.photo }}">
+<section class="main-content">
+  {% if page.taken %}
   <time datetime="{{ page.taken | date_to_xmlschema }}" itemprop="datePublished">
       {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
       {{ page.taken | date: date_format }}
-  </time> -
-  <div class="embedded-osm">
-  <a>{{page.place}}</a><br>
-  {% if page.lat and page.lon %}
-    <div class='map'>
-      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox={{page.lon | minus: page.bbox_size}}%2C{{page.lat | minus: page.bbox_size}}%2C{{page.lon | plus: page.bbox_size}}%2C{{page.lat | plus: page.bbox_size}}&layer=mapnik&marker={{page.lat}}%2C{{page.lon}}"></iframe>
-    </div>
+  </time> {% if page.place %}-{% endif %}
   {% endif %}
-  </div>
-
+  {% if page.place %}
+  {{page.place}}
+  {% endif %}
   <h2> {{page.title}} </h2>
-
   <div itemprop="articleBody">
     {{ content }}
+
+    <a href="/portfolio#{{ page.title | replace: ' ', '-' | downcase }}">back to Gallery</a>
   </div>
 
-  <a href="/portfolio#{{ page.title | replace: ' ', '-' | downcase }}">back to galery</a>
+  <script type="text/javascript">
+    var image = document.getElementById("large-image");
 
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
-</article>
+    image.addEventListener("click", function(e) {
+      if (!document.fullscreenElement) {
+        image.requestFullscreen().then(
+          screen.orientation.lock("landscape").catch(function(error) {}))
+      } else {
+        document.exitFullscreen();
+      }
+    })
+  </script>

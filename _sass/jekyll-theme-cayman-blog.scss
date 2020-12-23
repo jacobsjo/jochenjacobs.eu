@@ -22,6 +22,10 @@
   }
 }
 
+@function vh($quantity) {
+@return calc(var(--vh, 1vh) * #{$quantity});
+}
+
 * {
   box-sizing: border-box;
 }
@@ -224,6 +228,10 @@ a {
   }
 }
 
+.top-gap{
+  height: 3rem;
+}
+
 .main-content {
   word-wrap: break-word;
 
@@ -233,18 +241,18 @@ a {
 
   @include large {
     max-width: 64rem;
-    padding: 3rem 6rem 0rem 6rem;
+    padding: 0rem 6rem 0rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
   }
 
   @include medium {
-    padding: 3rem 4rem 0rem 4rem;
+    padding: 0rem 4rem 0rem 4rem;
     font-size: 1.1rem;
   }
 
   @include small {
-    padding: 2rem 1rem 0rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
     font-size: 1rem;
 
     ul,
@@ -463,41 +471,16 @@ a {
   }
 
   @include small {
-    width: auto;
-    margin: 0 1rem;
+//    width: auto;
+//    margin: 0 0rem;
   }
 }
 
 .large-image{
-  max-height: calc(max(calc(100vh - 14rem), 25rem));
+  max-height: calc(min(max(calc(100vh - 17rem), 35rem), 100vh));
   width: 100%;
   object-fit: contain;
-}
-
-.embedded-osm{
-  position: relative;
-  display: inline-block;
-  margin: auto;
-  max-width: 90%;
-  width: 350px;
-  .map{
-    display: block;
-    width: 100%;
-    height: 380px;
-    left: -5000px;
-    position: absolute;
-
-    iframe{
-      width: 100%;
-      height: 350px;
-
-      border: 1px solid black
-    }
-  }
-}
-
-.embedded-osm:hover .map{
-  left: 0px;
+  background-color: #333;
 }
 
 .site-footer {
