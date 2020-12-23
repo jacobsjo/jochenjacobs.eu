@@ -5,7 +5,9 @@ tagline: "Inspired py PhotoPills, this Plugin gives you Sun details on Windy.com
 header_bg: "/assets/blog_assets/windy-plugin-sun-position/header.jpg"
 header_color: '#010'
 header_source: '© OpenStreetMap contributors ; windy.com'
-categories: project
+categories:
+  - blog
+  - project
 author: "Jochen Jacobs"
 ---
 
@@ -15,7 +17,7 @@ This is a plugin for [Windy](https://www.windy.com) that gives shows sun and moo
 
 [Open Plugin](http://www.windy.com/plugins/windy-plugin-sun-position) | [View Code on GitHub](https://github.com/jacobsjo/windy-plugin-sun-position)
 
-You can also open the plugin by goging to *Menu → Install Windy plugin → Select "Sun position"*.
+You can also open the plugin by going to *Menu → Install Windy plugin → Select "Sun position"*.
 
 To open the display, right-click on the map (or tap and hold on mobile), then select "Sun Position". Then open a weather picker to see the sun dial and the details on the left.
 
@@ -54,3 +56,11 @@ Fixed timezone issues:
 - redesigned current sun position display
 - added options to disable moon, astronomical details and photography details separately
 - added footnote with links to plugin pages
+
+#### V0.3.1
+- desktop sidebar hotfix (broken by change on windy)
+
+#### V0.3.2
+- fixed plugin loading issue (broken by change on windy)
+- changed timezone lookup to tz-lookup package
+- added querry string

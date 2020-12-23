@@ -2,7 +2,9 @@
 layout: post
 title: "Dynamic VR-Rendering camera vergence and separation"
 tagline: "TAP 2019 Paper and Bachelor Thesis"
-categories: project
+categories:
+  - blog
+  - project
 author: "Jochen Jacobs"
 ---
 For my bachelor thesis in computer-science at TU-Berlin I have investigated the possibility of using dynamic camera adjustments based on eye-sensor data. The idea was that this would help reduce the [Vergence-Accommodation-Confluct](https://medium.com/vrinflux-dot-com/vergence-accommodation-conflict-is-a-bitch-here-s-how-to-design-around-it-87dab1a7d9ba). However I found that this method does not work - possibly because of added nausea from the movement of the camera or wrong eye sensor data.

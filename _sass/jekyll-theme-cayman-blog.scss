@@ -22,6 +22,10 @@
   }
 }
 
+@function vh($quantity) {
+@return calc(var(--vh, 1vh) * #{$quantity});
+}
+
 * {
   box-sizing: border-box;
 }
@@ -224,6 +228,10 @@ a {
   }
 }
 
+.top-gap{
+  height: 3rem;
+}
+
 .main-content {
   word-wrap: break-word;
 
@@ -233,18 +241,18 @@ a {
 
   @include large {
     max-width: 64rem;
-    padding: 3rem 6rem;
+    padding: 0rem 6rem 0rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
   }
 
   @include medium {
-    padding: 3rem 4rem;
+    padding: 0rem 4rem 0rem 4rem;
     font-size: 1.1rem;
   }
 
   @include small {
-    padding: 2rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
     font-size: 1rem;
 
     ul,
@@ -433,9 +441,52 @@ a {
   }
 }
 
+.galery {
+  font-size: 0;
+  padding: 0;
+
+  .galery-image{
+    display:inline-block;
+
+    img{
+      height: 100%;
+      width: 100%;
+      padding: 5px;
+    }
+
+    img:hover{
+      height: 100%;
+      width: 100%;
+      padding: 0px;
+      transition: padding .05s
+    }
+  }
+
+  @include large {
+    max-width: 82rem;
+    margin: 0 auto;
+  }
+
+  @include medium {
+  }
+
+  @include small {
+//    width: auto;
+//    margin: 0 0rem;
+  }
+}
+
+.large-image{
+  max-height: calc(min(max(calc(100vh - 17rem), 35rem), 100vh));
+  width: 100%;
+  object-fit: contain;
+  background-color: #333;
+}
+
 .site-footer {
-  padding-top: 2rem;
-  margin-top: 2rem;
+  padding-top: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
   border-top: solid 1px $hr-border-color;
 
   @include large {
