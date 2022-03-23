@@ -8,4 +8,4 @@
 layout: home
 ---
 
-Welcome! See Articles below. (I have no idea what to write here ;) )
+Welcome to my personal page. Below are are a few things I have done in the past. You can also take a look at [my Photos](portfolio.html).
