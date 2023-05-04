@@ -35,6 +35,7 @@ _500px:
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 target-blank:
     rel: nofollow
